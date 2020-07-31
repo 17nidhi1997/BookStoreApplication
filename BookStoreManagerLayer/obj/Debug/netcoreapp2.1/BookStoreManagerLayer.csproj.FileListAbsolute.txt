@@ -1,0 +1,13 @@
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreManagerLayer.deps.json
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreManagerLayer.dll
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreManagerLayer.pdb
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreCommonLayer.dll
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreRepositoryLayer.dll
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreCommonLayer.pdb
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreRepositoryLayer.pdb
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\obj\Debug\netcoreapp2.1\BookStoreManagerLayer.csprojAssemblyReference.cache
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\obj\Debug\netcoreapp2.1\BookStoreManagerLayer.AssemblyInfoInputs.cache
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\obj\Debug\netcoreapp2.1\BookStoreManagerLayer.AssemblyInfo.cs
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\obj\Debug\netcoreapp2.1\BookStoreManagerLayer.csproj.CopyComplete
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\obj\Debug\netcoreapp2.1\BookStoreManagerLayer.dll
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreManagerLayer\obj\Debug\netcoreapp2.1\BookStoreManagerLayer.pdb

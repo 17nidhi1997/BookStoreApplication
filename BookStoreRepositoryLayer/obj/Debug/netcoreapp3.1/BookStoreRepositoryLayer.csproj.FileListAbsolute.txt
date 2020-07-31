@@ -1,0 +1,4 @@
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreRepositoryLayer\bin\Debug\netcoreapp3.1\BookStoreCommonLayer.dll
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreRepositoryLayer\obj\Debug\netcoreapp3.1\BookStoreRepositoryLayer.csprojAssemblyReference.cache
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreRepositoryLayer\obj\Debug\netcoreapp3.1\BookStoreRepositoryLayer.AssemblyInfoInputs.cache
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreRepositoryLayer\obj\Debug\netcoreapp3.1\BookStoreRepositoryLayer.AssemblyInfo.cs

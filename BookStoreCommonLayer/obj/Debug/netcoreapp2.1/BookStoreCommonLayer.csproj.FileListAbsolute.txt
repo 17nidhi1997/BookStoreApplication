@@ -1,0 +1,8 @@
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreCommonLayer\bin\Debug\netcoreapp2.1\BookStoreCommonLayer.deps.json
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreCommonLayer\bin\Debug\netcoreapp2.1\BookStoreCommonLayer.dll
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreCommonLayer\bin\Debug\netcoreapp2.1\BookStoreCommonLayer.pdb
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreCommonLayer\obj\Debug\netcoreapp2.1\BookStoreCommonLayer.csprojAssemblyReference.cache
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreCommonLayer\obj\Debug\netcoreapp2.1\BookStoreCommonLayer.AssemblyInfoInputs.cache
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreCommonLayer\obj\Debug\netcoreapp2.1\BookStoreCommonLayer.AssemblyInfo.cs
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreCommonLayer\obj\Debug\netcoreapp2.1\BookStoreCommonLayer.dll
+C:\Users\Srinidhi\source\repos\BookStoreApplication\BookStoreCommonLayer\obj\Debug\netcoreapp2.1\BookStoreCommonLayer.pdb
