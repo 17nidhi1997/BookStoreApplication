@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BookStoreCommonLayer;
+using BookStoreCommonLayer.BookDetail;
+using BookStoreCommonLayer.BookModel;
 using BookStoreManagerLayer.IManager;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -13,24 +15,25 @@ namespace BookStoreApplication.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class CartController : ControllerBase
+    public class OrderController : ControllerBase
     {
-        public ICartDetailsManager _Manager;
-        public CartController(ICartDetailsManager manager)
+        public IOrderDetialsManager _Manager;
+        public OrderController(IOrderDetialsManager manager)
         {
             this._Manager = manager;
         }
 
-        [HttpPut]
-        public IActionResult AddCartDetails(int bookid)
+        [HttpPost]
+        public IActionResult PlaceOrder(OrderDetails orderDetail)
         {
             string message;
-            var result = this._Manager.AddCartDetails(bookid);
+            var result = this._Manager.PlaceOrder(orderDetail);
             try
             {
                 if (!result.Equals(null))
                 {
-                    message = "Book added to cart successfully.";
+                    message = "placed Order successfully.";
+                    _Manager.OrderConfirmationToEmail(orderDetail.UUserId, orderDetail.OrderId);
                     return this.Ok(new { message, result });
                 }
                 message = "Please insert correct book details.!!";
@@ -43,23 +46,23 @@ namespace BookStoreApplication.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllCartItems()
+        public IActionResult ViewOrderPlaced()
         {
             string message;
-            var result = this._Manager.GetCartItems();
+            var result = this._Manager.ViewOrderPlaced();
             try
             {
                 if (!result.Equals(null))
                 {
-                    message = "All Cart Items";
+                    message = "view order details";
                     return this.Ok(new { message, result });
                 }
-                message = "Something went wrong please try again!!";
+                message = "Something went wrong";
                 return BadRequest(new { message });
             }
             catch (CustomException)
             {
-                return BadRequest(CustomException.ExceptionType.OPTIONS_NOT_MATCH);
+                return BadRequest(CustomException.ExceptionType.INVALID_INPUT);
             }
         }
     }

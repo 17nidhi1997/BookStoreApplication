@@ -22,6 +22,12 @@ namespace BookStoreManagerLayer.ManagerImplemantation
         {
             return this._BookStore.GetBookDetails();
         }
+
+        public object GetBookDetailsByBookId(int bookid)
+        {
+            return this._BookStore.GetBookDetailsByBookId(bookid);
+        }
+
         public object GetBookDetailsByBookName(string bookName)
         {
             return this._BookStore.GetBookDetailsByBookName(bookName);

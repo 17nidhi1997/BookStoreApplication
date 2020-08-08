@@ -10,5 +10,6 @@ namespace BookStoreRepositoryLayer.IRepository
         object AddBookDetails(BooksDetails booksDetail);
         IEnumerable<BooksDetails> GetBookDetails();
         IEnumerable<BooksDetails> GetBookDetailsByBookName(string bookName);
+        IEnumerable<BooksDetails> GetBookDetailsByBookId(int bookid);
     }
 }

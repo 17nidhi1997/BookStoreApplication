@@ -10,5 +10,6 @@ namespace BookStoreManagerLayer.IManager
         object AddBookDetails(BooksDetails booksDetail);
         object GetBookDetails();
         object GetBookDetailsByBookName(string bookName);
+        object GetBookDetailsByBookId(int bookid);
     }
 }

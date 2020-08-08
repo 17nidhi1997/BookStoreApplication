@@ -31,6 +31,7 @@ namespace BookStoreRepositoryLayer.DBConnection
                 "begin " +
                 "execute immediate 'create table BOOKSTORE.Registration(UserId int NOT NULL PRIMARY KEY ,FirstName varchar2(20) not null,LastName varchar2(20) not null ,Email varchar2(20) not null,Password  varchar2(20) not null )';" +
                 "execute immediate 'create table BOOKSTORE.BookDetail(BookId int NOT NULL PRIMARY KEY, BookName varchar2(20) not null,AuthorName varchar2(20) not null,Price float,Quantity int not null,Catagory varchar2(20) not null ,Rating float,AddToCart varchar2(20) not null,AddToWishlist varchar2(20))';" +
+                "execute immediate 'create table BOOKSTORE.OrderDetails(OrderId int NOT NULL PRIMARY KEY ,Address varchar2(20) not null,City varchar2(20) not null,PinCode int not null,Phone_no int not null,PaymentMethod varchar2(20) not null,Quantity int not null,UUserId int,BBookId int,FOREIGN KEY(BBookId)REFERENCES BookDetail(BookId),FOREIGN KEY(UUserId)REFERENCES Registration(UserId))';"+
                 "end;";
                 cmd.CommandType = CommandType.Text;
                 cmd.ExecuteNonQuery();

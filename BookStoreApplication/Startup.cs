@@ -40,7 +40,10 @@ namespace BookStoreApplication
             services.AddTransient<IBookDetialsRepository, BookDetialsRepository>();
             services.AddTransient<ICartDetailsManager, CartDetailsManager>();
             services.AddTransient<ICartDetialsRepository, CartDetailsRepository>();
-
+            services.AddTransient<IWishListManager, WishListManager>();
+            services.AddTransient<IWishListRepository, WishListRepository>();
+            services.AddTransient<IOrderDetialsManager,OrderDetialsMaganer>();
+            services.AddTransient<IOrderDetialsRepository, OrderDetialsReposiory>();
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("V1", new Info { Title = "BookStoreApplication", Version = "V1" });
@@ -85,6 +88,7 @@ namespace BookStoreApplication
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/V1/Swagger.json", "BookStoreApplication v1");
+                //c.RoutePrefix = "";
             });
             app.UseAuthentication();
             app.UseHttpsRedirection();

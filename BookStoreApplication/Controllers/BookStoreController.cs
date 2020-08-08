@@ -85,5 +85,27 @@ namespace BookStoreApplication.Controllers
                 return BadRequest(CustomException.ExceptionType.OPTIONS_NOT_MATCH);
             }
         }
+
+        [HttpGet]
+        [Route("GetBookDetailsById")]
+        public IActionResult GetBookDetailsById(int bookid)
+        {
+            string message;
+            var result = this._Manager.GetBookDetailsByBookId(bookid);
+            try
+            {
+                if (!result.Equals(null))
+                {
+                    message = " Books Detail";
+                    return this.Ok(new { message, result });
+                }
+                message = "Something went wrong please try again!!";
+                return BadRequest(new { message });
+            }
+            catch (CustomException)
+            {
+                return BadRequest(CustomException.ExceptionType.OPTIONS_NOT_MATCH);
+            }
+        }
     }
 }

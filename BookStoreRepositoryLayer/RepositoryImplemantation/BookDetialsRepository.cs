@@ -121,5 +121,43 @@ namespace BookStoreRepositoryLayer.RepositoryImplemantation
                 throw new CustomException(CustomException.ExceptionType.INVALID_INPUT, exception.Message);
             }
         }
+
+        public IEnumerable<BooksDetails> GetBookDetailsByBookId(int bookid)
+        {
+            try
+            {
+                List<BooksDetails> list = new List<BooksDetails>();
+                var commandText = Queries.GetBookDetailByBookIdQuery + "'" + bookid + "'";
+                using (var _db = new OracleConnection(configuration.GetConnectionString("UserDbConnection")))
+                using (OracleCommand cmd = new OracleCommand(commandText, _db))
+                {
+                    cmd.Connection = _db;
+                    cmd.CommandType = CommandType.Text;
+                    _db.Open();
+                    OracleDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        BooksDetails book = new BooksDetails();
+                        book.BookId = Convert.ToInt32(reader["BookId"]);
+                        book.BookName = reader["BookName"].ToString();
+                        book.AuthorName = reader["AuthorName"].ToString();
+                        book.Price = Convert.ToDouble(reader["Price"]);
+                        book.Quantity = Convert.ToInt32(reader["Quantity"]);
+                        book.Catagory = reader["Catagory"].ToString();
+                        book.Rating = Convert.ToDouble(reader["Rating"]);
+                        book.AddToCart = reader["AddToCart"].ToString();
+                        book.AddToWishlist = reader["AddToWishlist"].ToString();
+                        list.Add(book);
+                    }
+                    _db.Close();
+                    return list;
+                }
+            }
+            catch (CustomException exception)
+            {
+                throw new CustomException(CustomException.ExceptionType.INVALID_INPUT, exception.Message);
+            }
+        }
+
     }
 }

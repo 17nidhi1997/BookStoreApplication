@@ -13,19 +13,19 @@ namespace BookStoreApplication.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class CartController : ControllerBase
+    public class WishListController : ControllerBase
     {
-        public ICartDetailsManager _Manager;
-        public CartController(ICartDetailsManager manager)
+        public IWishListManager _Manager;
+        public WishListController(IWishListManager manager)
         {
             this._Manager = manager;
         }
 
         [HttpPut]
-        public IActionResult AddCartDetails(int bookid)
+        public IActionResult AddWishListDetails(int bookid)
         {
             string message;
-            var result = this._Manager.AddCartDetails(bookid);
+            var result = this._Manager.AddWishListDetails(bookid);
             try
             {
                 if (!result.Equals(null))
@@ -42,11 +42,11 @@ namespace BookStoreApplication.Controllers
             }
         }
 
-        [HttpGet]
-        public IActionResult GetAllCartItems()
+       [HttpGet]
+        public IActionResult GetWishListItems()
         {
             string message;
-            var result = this._Manager.GetCartItems();
+            var result = this._Manager.GetWishListItems();
             try
             {
                 if (!result.Equals(null))
